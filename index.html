@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入Bootstrap简化样式，无需自己写CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>[UAVREL Dataset] - UAV Video Dynamic Relationship Understanding</title>
+    <style>
+        /* 简单自定义样式，贴合参考示例的简洁风格 */
+        body { padding-top: 2rem; max-width: 1000px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
+        .header { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+        .section { margin-bottom: 2.5rem; }
+        .cite-box { background-color: #f8f9fa; padding: 1rem; border-radius: 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <!-- 顶部标题模块（参考recon1m的醒目标题） -->
+    <div class="header">
+        <h1>[UAVREL Dataset v1.0]</h1>
+        <p class="lead">[Dataset for UAV Video Dynamic Relationship Understanding]</p>
+    </div>
+
+    <!-- 1. 数据集概述模块 -->
+    <div class="section">
+        <h2>Overview</h2>
+        <p>[UAVREL是针对无人机视频动态目标关系理解的大规模数据集，包含50段高清无人机视频，标注了目标间的时空关联]</p>
+        <ul>
+            <!-- <li>Total size: [100 GB]</li> -->
+            <li>Number of samples: [50 videos]</li>
+            <li>Annotation types: [relationship]</li>
+            <li>License: <a href="[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)">CC-BY 4.0</a></li>
+        </ul>
+    </div>
+
+    <!-- 2. 下载模块（核心！指向数据集存储地址） -->
+    <div class="section">
+        <h2>Download</h2>
+        <p>The dataset is available via the following permanent links:</p>
+        <ul>
+            <!-- 推荐：指向Zenodo（带DOI） -->
+            <li>Zenodo (with DOI): <a href="[https://doi.org/10.5281/zenodo.12345678](https://doi.org/10.5281/zenodo.12345678)">https://doi.org/10.5281/zenodo.12345678</a></li>
+            <!-- 补充：指向GitHub Release -->
+            <li>GitHub Release: <a href="[https://github.com/L-momok/uavrel-dataset/releases/tag/v1.0](https://github.com/L-momok/uavrel-dataset/releases/tag/v1.0)">https://github.com/你的用户名/uavrel-dataset/releases/tag/v1.0</a></li>
+        </ul>
+        <p><strong>Note:</strong> [替换为下载说明：例如“数据集分卷压缩为10个ZIP文件（每卷10GB），解压前请校验MD5值；使用前请阅读数据使用协议。”]</p>
+    </div>
+
+    <!-- 3. 使用说明模块 -->
+    <div class="section">
+        <h2>Usage</h2>
+        <h4>Data Format</h4>
+        <p>[替换为数据格式说明：例如“视频文件为MP4格式（1920×1080，30fps），标注文件为JSON格式，包含每帧目标的ID、坐标、关系标签等信息。”]</p>
+        <h4>Example Code (Python)</h4>
+        <pre class="cite-box">
+# Load annotation file
+import json
+with open('annotation_sample.json', 'r') as f:
+    ann = json.load(f)
+# Print sample annotation
+print(ann['video_001']['frame_100']['target_01']['relationship'])
+        </pre>
+    </div>
+
+    <!-- 4. 引用模块（论文必备） -->
+    <div class="section">
+        <h2>Citation</h2>
+        <p>Please cite our dataset in your publications if it helps your research:</p>
+        <h4>BibTeX</h4>
+        <div class="cite-box">
+@dataset{zhang2026uavrel,<br>
+  author       = {Zhang, San and Li, Si and Wang, Wu},<br>
+  title        = {UAVREL: A Dataset for UAV Video Dynamic Relationship Understanding (v1.0)},<br>
+  year         = 2026,<br>
+  publisher    = {Zenodo},<br>
+  doi          = {10.5281/zenodo.12345678},<br>
+  url          = {https://uavrel-dataset.github.io/}<br>
+}<br>
+        </div>
+        <h4>APA 7th</h4>
+        <div class="cite-box">
+Zhang, S., Li, S., & Wang, W. (2026). UAVREL: A Dataset for UAV Video Dynamic Relationship Understanding (v1.0) [Dataset]. Zenodo. https://uavrel-dataset.github.io/ (DOI: 10.5281/zenodo.12345678)
+        </div>
+    </div>
+
+    <!-- 5. 作者/机构模块 -->
+    <div class="section">
+        <h2>Authors</h2>
+        <ul>
+            <li>[San Zhang] - [School of Computer Science, XX University] ([zhangsan@xx.edu.cn])</li>
+            <li>[Si Li] - [XX Research Institute]</li>
+        </ul>
+        <p>Related Paper: <a href="[https://doi.org/10.1109/CVPR.2026.XXXXXXX](https://doi.org/10.1109/CVPR.2026.XXXXXXX)">DOI: 10.1109/CVPR.2026.XXXXXXX</a></p>
+    </div>
+
+    <!-- 底部版权信息 -->
+    <footer>
+        <p>&copy; 2026 [XX University]. All rights reserved under CC-BY 4.0.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
